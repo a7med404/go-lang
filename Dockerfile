@@ -18,7 +18,7 @@ COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -ldflags='-w -s' -o /app/myapp .
 
 # Final stage
-FROM alpine:3.18
+FROM alpine:latest
 
 # Install CA certificates
 RUN apk add --no-cache ca-certificates
